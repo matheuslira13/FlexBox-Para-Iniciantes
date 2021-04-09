@@ -1,0 +1,236 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(270deg, #106AF5, #F6AC4F);
+    text-align: center !important;   
+}
+li{
+   
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    transition: color 2s
+}
+
+a:hover{
+    color: rgb(66, 31, 99);
+}
+
+.explicacao{
+    text-align: center;
+    padding: 20px;
+}
+
+.controle{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.controleConteudo{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.conteiner{
+    
+    display: flex;
+    margin: 10px;
+    border-radius: 50px;
+   justify-content: center;
+   flex-wrap: wrap;
+    
+}
+
+.conteiner2{
+  
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-radius: 50px;
+  
+    
+}
+
+.conteiner3{
+    background-color: #DDD;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    border-radius: 30px;
+    
+    flex-wrap: wrap;
+   
+}
+
+.conteiner4{
+    
+    display: flex;
+    margin: 10px;
+    border-radius: 50px;
+    flex-wrap: wrap;
+    background-image: linear-gradient(270deg, rgba(194,99,33,0.5), rgba(54,33,194,0.5) );
+}
+
+.conteiner5{
+    background-color: rgb(119, 30, 30);
+    display: flex;
+    margin: 10px;
+    border-radius: 30px;
+    height: 500px;
+
+}
+
+
+
+/***********************************************************************************************************/
+ .exemplo {
+    width: 50px;
+    background-color: rgb(0, 183, 255);
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    
+}
+ .exemplo1 {
+    flex: 1;
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    
+}
+
+.exemplo2 {
+    flex: 1;
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+ 
+}
+
+.exemplo3 {
+    flex: 1;
+    background-color: rgb(65, 12, 47);
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+    color: #DDD;
+}
+
+ .exemploWRAP{
+    width: 300px;
+    background-color: rgb(165, 83, 83);
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.exemploWRAP2{
+    width: 200px;
+    background-color: rgb(187, 22, 22);
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+ .exemplo4{
+    width: 100px;
+    background-color: rgb(187, 22, 137);
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+ .exemplo5{
+    width: 100px;
+    background-color: rgb(98, 184, 224);
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+    height: 100px;
+    border-radius: 50%;
+    line-height: 80px;
+}
+.btn {
+    margin:10px !important;
+}
+
+h2{
+    text-align: center;
+}
+h3{
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    
+  }
+  
+  td, th {
+    
+    text-align: left;
+    padding: 8px;
+    border-radius: 10px;
+  }
+/*******************CLASSES CRIADAS PARA SEREM USADAS COM O JAVASCRIPT****************/
+
+.wrap{
+    flex-wrap: wrap;
+}
+.withFlexFlowRow{
+    flex-flow:row wrap;
+}
+
+.withFlexFlowColumn{
+    flex-flow:column wrap;
+}
+
+.flexDirectionColumn{
+    flex-direction: column;
+}
+
+.justifyCenter{
+    justify-content: center;
+}
+
+.justifyStart{
+    justify-content: flex-start;
+}
+
+.justifyEnd{
+    justify-content: flex-end;
+}
+
+.justifyAround{
+    justify-content: space-around;
+}
+
+.justifyBetween{
+    justify-content: space-between;
+}
+
+.alignCenter{
+    align-items:center;
+}
+
+.alignStart{
+    align-items:flex-start;
+}
+
+.alignEnd{
+    align-items:flex-end
+}

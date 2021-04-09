@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./assests/flexbox.css">
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+    <title>Exemplo de como funiona o flex box</title>
+
+   
+</head>
+<body>
+    <div class="container  " >
+     <!--***********************************************EXEMPLO DE DIVISÃO IGUAL PARA TODOS COM A MEDIDA PRE-DETERMINADA ***********************-->
+        <h2>Display flex</h2>
+        <div class="conteiner">
+            <div class="exemplo">1</div>
+            <div class="exemplo">2</div>
+            <div class="exemplo">3</div>
+            <div class="exemplo">4</div>
+            <div class="exemplo">5</div>
+            <div class="exemplo">6</div>
+            <div class="exemplo">7</div>
+            <div class="exemplo">8</div>
+            <div class="exemplo">9</div>
+            <div class="exemplo">10</div>
+        </div>
+    <!--***********************************************EXEMPLO DE DIVISÃO IGUAL PARA TODOS ***********************-->
+    <h2>Display flex  com a propriadade flex = 1 para todas as divs</h2>
+    <div class="conteiner">
+        <div class="exemplo1">1</div>
+        <div class="exemplo1">2</div>
+        <div class="exemplo1">3</div>
+        <div class="exemplo1">4</div>
+        <div class="exemplo1">5</div>
+        <div class="exemplo1">6</div>
+        <div class="exemplo1">7</div>
+        <div class="exemplo1">8</div>
+        <div class="exemplo1">9</div>
+        <div class="exemplo1">10</div>
+    </div>
+
+    <!--*************************************************EXEMPLO DE QUE UM PODE SER 2VEZES MAIOR QUE O OUTRO***************-->
+    <h3> A unica div que tera a propriadade flex=2 e a 1°
+        observe que ela tera o dobro do tamanho das divs restantes
+    </h3>
+    <div class="conteiner">
+        <div class="exemplo2" style="flex: 2 !important;">1</div>
+        <div class="exemplo2">2</div>
+        <div class="exemplo2">3</div>
+        <div class="exemplo2">4</div>
+        <div class="exemplo2">5</div>
+        <div class="exemplo2">6</div>
+        <div class="exemplo2">7</div>
+        <div class="exemplo2">8</div>
+        <div class="exemplo2">9</div>
+        <div class="exemplo2">10</div>
+    </div>
+ <!--*************************************************EXEMPLO DE QUE UM PODE SER 3VEZES MAIOR QUE O OUTRO***************-->
+    <h3> A 1° div tera flex=3, a 2° flex=2 e todas as restantes flex=1</h3>
+    <div class="conteiner">
+        <div class="exemplo3" style="flex: 3 !important; background-color:green">1</div>
+        <div class="exemplo3" style="flex: 2 !important; background-color:yellow">2</div>
+        <div class="exemplo3">3</div>
+        <div class="exemplo3">4</div>
+        <div class="exemplo3">5</div>
+        <div class="exemplo3">6</div>
+        <div class="exemplo3">7</div>
+        <div class="exemplo3">8</div>
+        <div class="exemplo3">9</div>
+        <div class="exemplo3">10</div>
+    </div>
+
+<!--****************************************************EXEMPLO PADRAO(OBS POR PADRAO O FLEX SEM COM O WRAP DESABILITADO**************-->
+    <h3>Toda div colocada nesse block possui um width=300px, portanto seria impossivel colocar todas as 
+        divs, na mesma linha, então o flex-box ignora o os 300px e distribui igual o tamanho das divs,
+        caso queira que o as divs quebrem , é necessario a propriadade  flex-wrap: wrap; clique nesse botao
+        para ver o exemplo
+        <b>Caso esteja no celular clique no botao com wrap para ler melhor</b>
+      
+    </h3>
+        <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+        <button type="button" class="btn btn-primary"  onclick="flexWrap()">Com flex-wrap</button>
+        <button type="button" class="btn btn-primary" onclick="WithoutFlexWrap()">Sem flex-wrap</button>
+    </div>
+    <div class="conteiner2">
+        <div class="exemploWRAP">1</div>
+        <div class="exemploWRAP">2</div>
+        <div class="exemploWRAP">3</div>
+        <div class="exemploWRAP">4</div>
+        <div class="exemploWRAP">5</div>
+        <div class="exemploWRAP">6</div>
+        <div class="exemploWRAP">7</div>
+        <div class="exemploWRAP">8</div>
+        <div class="exemploWRAP">9</div>
+        <div class="exemploWRAP">10</div>
+    </div>
+
+<!--************************FLEX FLOW E UM PROPRIEDADE QUE  DEFINENE TANTO O ROW E WRAP *************************-->
+<!--NO CASO DEFINE COMO LINHA E QUERBRA ROW=LINHA E WRAP=A QUEBRA---------------------------------------------------->
+     <h3>Podemos controlar para onde vai ser quebrado a div com flex-flow</h3>
+     <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+        <button type="button" class="btn btn-primary" onclick="flexFlowRow()">flex-flow= row Wrap</button>
+        <button type="button" class="btn btn-primary" onclick="flexFlowColumn()">flex-flow= column Wrap</button>
+     </div> 
+     <div class="conteiner3">
+        <div class="exemploWRAP2">1</div>
+        <div class="exemploWRAP2">2</div>
+        <div class="exemploWRAP2">3</div>
+        <div class="exemploWRAP2">4</div>
+        <div class="exemploWRAP2">5</div>
+        <div class="exemploWRAP2">6</div>
+        <div class="exemploWRAP2">7</div>
+        <div class="exemploWRAP2">8</div>
+        <div class="exemploWRAP2">9</div>
+        <div class="exemploWRAP2">10</div>
+    </div>
+<!--***********************************EXEMPLO DE COMO COLOCAR NO MEIO DA TELA  ******************************-->
+    <h3> Quando colocamos display flex por padrao sua a propriadade flex-direction= row </h3>
+    <h3> Podemos troca sua direcao colocando flex-direction='row'</h3>
+    <div class="d-flex justify-content-center" style="flex-wrap: wrap;">
+        <button type="button"  class="btn btn-primary" onclick="withFlexDirection()">flex-direction= column</button>
+        <button type="button" class="btn btn-primary" onclick="withOutFlexDirection()">flex-direction= row</button>
+    </div>
+    <div class="conteiner4">
+            <div class="exemplo4">1</div>
+            <div class="exemplo4">2</div>
+            <div class="exemplo4">3</div>  
+    </div>
+<!--*********************************************************************************************************-->
+<!--
+SITUAÇÃO DIFICIL DE ENTENDER MAS VAMOS LAR A PROPRIEDADE align-itens ELA VAI SEMPRE ALINHA AO CONTRARIO DA PROPRIEDADE 
+QUE ESTAR EXEMPLO , SE VOCE DEIXA COM DIREÇÃO NA COLUNA O align-itens VAI ALINHAR NA LINHA, ISSO TBM FUNCIONA 
+AO CONTRARIO, SE VOCE DEIXA NA DIREÇÃO DA LINHA O aling-itens VAI ALINHA NA COLUNA
+
+*************************EXEMPLO DE DIREÇÃO NA COLUNA QUE VAI TER O align-itens NA LINHA-->
+    <div class="explicacao">
+        <h3> Muito importante voce saber!</h3>
+        <h4>no display flex voce controla o conteudo na horizontal como na vertical
+            X e Y
+        </h4>
+        <h4> E vc controla isso com basicamente 2 propriadades </h4>
+        <ul>
+            <li>justify-content</li>
+            <li>align-items</li>
+        </ul>
+        <h4> Quando o display tem o flex-direction row </h4>
+        <h4> o justify-content controla a linha na horizontal e o align-items na vertical</h4>
+        <h4> Quando o display tem o flex-direction column</h4>
+        <h4> É invertido sendo o align-items que controla a linha horizontal e justify-content o contrario</h4>
+        <h4> O justify-content e o align-items tem as suas propriadades para controla pra cima pra baixo 
+            e etc... 
+        </h4>
+        <h4> Aqui em baixo tem um bom exemplo de como ficaria o codigo </h4>
+        <h4> Depois de entender como funciona o flex box aconselho jogar o 
+            <u><a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a></u> </h4>
+    </div>
+
+    <div class="controle">
+        <input type="radio" id="justify" name="controleDirection" value="male" onclick='controleDirectionRow()' >
+        <label >flex-direction ROW</label><br>
+        <input type="radio" id="align" name="controleDirection" value="female" onclick='controleDirectionColumn()' >
+        <label >flex-direction COLUMN</label><br>
+    </div>
+    <div class="controleConteudo">
+        <table>
+            <tr>
+                <th>justify-content</th>
+                <th>align-items</th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="justify" name="justify" value="male" onclick='justifyCenter()'>
+                    <label >justify-content=CENTER</label>
+                </td>
+                <td>
+                    <input type="radio" id="justify" name="align" value="male" onclick='alignCenter()'>
+                    <label >align-items=CENTER</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="justify" name="justify" value="male" onclick='justifyStart()'>
+                    <label >justify-content=FLEX-START</label>
+                </td>
+                <td>
+                    <input type="radio" id="justify" name="align" value="male" onclick='alignStart()'>
+                    <label >align-items=FLEX-START</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="justify" name="justify" value="male" onclick='justifyEnd()'>
+                    <label >justify-content=FLEX-END</label>
+                </td>
+                <td>
+                    <input type="radio" id="justify" name="align" value="male" onclick='alignEnd()'>
+                    <label >align-items=FLEX-END</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="justify" name="justify" value="male" onclick='justifyAround()' >
+                    <label >justify-content=SPACE-AROUND</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="justify" name="justify" value="male" onclick='justifyBetween()'>
+                    <label >justify-content=SPACE-BETWEEN</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+<div class="conteiner5">
+        <div class="exemplo5">1</div>
+        <div class="exemplo5">2</div>
+        <div class="exemplo5">3</div>
+      
+    </div>
+    <!--**********MESMOEXEMPLO SO QUE ADICIONADO A PROPRIEDADE  JUSTIFY-CONTENT:CENTER-->
+</div>
+    <script type="text/javascript" src="./assests/js.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
