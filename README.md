@@ -1,0 +1,2 @@
+Encontrei um arquivo de FlexBox no meu HD bem completinho e alto explicativo que eu tinha feito a muito tempo,
+dei uma customizada e vou colocar aqui para quem ta comecando ou ate mesmo para material de consulta
